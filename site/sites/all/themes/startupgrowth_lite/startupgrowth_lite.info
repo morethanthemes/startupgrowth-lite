@@ -57,3 +57,9 @@ settings[google_map_js]= 1
 settings[bootstrap_css_cdn]= 3.3.2
 settings[bootstrap_js_cdn]= 3.3.2
 settings[credits_display]= 1
+; Information added by Drupal.org packaging script on 2015-01-20
+version = "7.x-1.0"
+core = "7.x"
+project = "startupgrowth_lite"
+datestamp = "1421778502"
+
