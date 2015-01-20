@@ -1,0 +1,59 @@
+name = Startup Growth Lite
+description = A free Bootstrap-based, responsive Drupal theme by <a href="http://www.morethanthemes.com/" target="_blank">More than (just) Themes</a>.
+version = @VERSION@
+core = 7.x
+
+stylesheets[all][] = style.css
+
+scripts[] = js/jquery.browser.min.js
+
+regions[header] = Header
+regions[navigation] = Navigation
+regions[search_area] = Navigation search area
+regions[banner] = Banner
+regions[top_content] = Top Content
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[sidebar_first] = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[highlighted_bottom_left] = Highlighted Bottom Left
+regions[highlighted_bottom_right] = Highlighted Bottom Right
+regions[bottom_content] = Bottom Content
+regions[footer_top] = Footer Top
+regions[footer_first] = Footer First
+regions[footer_second] = Footer Second
+regions[footer_third] = Footer Third
+regions[footer_fourth] = Footer Fourth
+regions[sub_footer_left] = Subfooter Left
+regions[footer] = Subfooter Right
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+settings[breadcrumb_display]= 1
+settings[scrolltop_display]= 1
+settings[frontpage_content_print]= 1
+settings[color_scheme]= 'default'
+settings[layout_mode]= 'wide'
+settings[fixed_header]= 1
+settings[form_style]= 'form-style-1'
+settings[headings_font_family]= 'hff-7'
+settings[paragraph_font_family]= 'pff-7'
+settings[sitename_font_family]= 'sff-7'
+settings[slogan_font_family]= 'slff-7'
+settings[responsive_menu_state]= 1
+settings[responsive_menu_switchwidth]='760'
+settings[responsive_menu_topoptiontext]= 'Select a page'
+settings[responsive_menu_optgroups]= 1
+settings[responsive_menu_nested]= 1
+settings[responsive_multilevelmenu_state]= 0
+settings[parallax_state]= 1
+settings[parallax_opacity]= '80'
+settings[google_map_latitude]='40.726576'
+settings[google_map_longitude]='-74.046822'
+settings[google_map_zoom]= 13
+settings[google_map_canvas]= 'map-canvas'
+settings[google_map_js]= 1
+settings[bootstrap_css_cdn]= 3.3.2
+settings[bootstrap_js_cdn]= 3.3.2
+settings[credits_display]= 1

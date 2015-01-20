@@ -1,0 +1,50 @@
+a, #main-navigation ul.menu li a:hover, #main-navigation ul.main-menu.menu>li.active-trail>a:hover, #main-navigation .sf-menu>li>a:hover,
+#main-navigation .sf-menu>li.sfHover>a, ul.menu li.collapsed > a:before, ul.menu li.collapsed > a:hover:before, ul.menu li.expanded > a:hover:before, 
+.footer-area ul.menu li.active-trail > a:before, ul.pager li.pager-current, .item-list ul li.pager-current.last, .comment-counter,
+.comment ul.links li a, .views-field-title a, .footer-area a, .footer-area ul.social-media-info li a, ul.social-media-info li a:hover i,
+.view-showcases .view-content .more-link a { color: #8d36ad; }
+
+.team-member ul.social-bookmarks li a:hover, ul.links li a, a.more, input[type="submit"], input[type="reset"], input[type="button"], 
+.checkout-buttons .checkout-cancel, .checkout-buttons .checkout-back, .view-showcases .more-link a { background-color: #8d36ad; }
+
+ul.pager li.pager-current, .item-list ul li.pager-current.last { border-bottom: 1px solid #8d36ad; }
+
+.team-member ul.social-bookmarks li a:hover { border-color: #8d36ad; }
+
+a:hover, a:focus, blockquote:after, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .footer-area ul.menu li a:hover,
+ul.pager li > a:hover, #breadcrumb a:hover, .post-submitted-info i, .comment ul.links li a:hover, .view-showcases .info a.comments:after,
+#top-content .views-field-title a:hover, .views-field-title a:hover, .view-testimonials .views-field-body p:after, .node-type-mt-testimonial .field-name-body p:after,
+.footer-area a:hover, .view-showcases .view-content .more-link a:hover, .footer-area .view-testimonials.highlighted .views-field-body p:after { color: #a63fcc; }
+
+ul.links li a:hover, a.more:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover, .view-showcases .more-link a:hover, 
+.checkout-buttons .checkout-cancel:hover, .checkout-buttons .checkout-back:hover { background-color: #a63fcc; }
+
+.footer-area ul.social-bookmarks li a:hover, .footer-area ul.brands li a:hover,
+.subfooter-area ul.social-bookmarks li a:hover, .subfooter-area ul.brands li a:hover { border-color: #a63fcc; }
+
+ul.pager li > a:hover { border-bottom: 1px solid #a63fcc; }
+
+.overlay { 
+background: rgba(166,63,204,0.75);
+background: -moz-linear-gradient(top,  rgba(166,63,204,0.75) 0%, rgba(141,54,173,0.75) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(166,63,204,0.75)), color-stop(100%,rgba(141,54,173,0.75))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(166,63,204,0.75) 0%,rgba(141,54,173,0.75) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(166,63,204,0.75) 0%,rgba(141,54,173,0.75) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(166,63,204,0.75) 0%,rgba(141,54,173,0.75) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(166,63,204,0.75) 0%,rgba(141,54,173,0.75) 100%); /* W3C */	
+}
+
+.caption-link a { 
+background: #a63fcc; /* Old browsers */
+background: -moz-linear-gradient(top, #a63fcc 0%, #8d36ad 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a63fcc), color-stop(100%,#8d36ad)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #a63fcc 0%,#8d36ad 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #a63fcc 0%,#8d36ad 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #a63fcc 0%,#8d36ad 100%); /* IE10+ */
+background: linear-gradient(to bottom, #a63fcc 0%,#8d36ad 100%); /* W3C */
+}
+
+/*resets*/
+#main-navigation .sf-menu ul li a:hover, #main-navigation .sf-menu ul li.sfHover>a { color: #fff; }
+
+.view-showcases .view-content .more-link a { background: transparent; }
