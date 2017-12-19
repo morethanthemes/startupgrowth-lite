@@ -155,6 +155,15 @@ class ThemeTestCase extends DrupalWebTestCase {
     $this->assertNotEqual(theme_get_setting('subtheme_override', 'test_basetheme'), theme_get_setting('subtheme_override', 'test_subtheme'), 'Base theme\'s default settings values can be overridden by subtheme.');
     $this->assertIdentical(theme_get_setting('basetheme_only', 'test_subtheme'), 'base theme value', 'Base theme\'s default settings values are inherited by subtheme.');
   }
+
+  /**
+   * Test the drupal_add_region_content() function.
+   */
+  function testDrupalAddRegionContent() {
+    $this->drupalGet('theme-test/drupal-add-region-content');
+    $this->assertText('Hello');
+    $this->assertText('World');
+  }
 }
 
 /**
@@ -634,6 +643,37 @@ class ThemeDebugMarkupTestCase extends DrupalWebTestCase {
 
     $this->drupalGet('node/' . $node->nid);
     $this->assertNoRaw('<!-- THEME DEBUG -->', 'Theme debug markup not found in theme output when debug is disabled.');
+  }
+
+}
+
+/**
+ * Tests module-provided theme engines.
+ */
+class ModuleProvidedThemeEngineTestCase extends DrupalWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Theme engine test',
+      'description' => 'Tests module-provided theme engines.',
+      'group' => 'Theme',
+    );
+  }
+
+  function setUp() {
+    parent::setUp('theme_test');
+    theme_enable(array('test_theme', 'test_theme_nyan_cat'));
+  }
+
+  /**
+   * Ensures that the module provided theme engine is found and used by core.
+   */
+  function testEngineIsFoundAndWorking() {
+    variable_set('theme_default', 'test_theme_nyan_cat');
+    variable_set('admin_theme', 'test_theme_nyan_cat');
+
+    $this->drupalGet('theme-test/engine-info-test');
+    $this->assertText('Miaou');
   }
 
 }
