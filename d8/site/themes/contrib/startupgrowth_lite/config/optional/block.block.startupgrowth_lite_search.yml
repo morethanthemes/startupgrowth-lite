@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: Ultl2qsy-93KpLoRBbgOMwxlwq29R69kO8MpcOCqvHU
+id: startupgrowth_lite_search
+theme: startupgrowth_lite
+region: search_area
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: '0'
+visibility: {  }

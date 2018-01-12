@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Visual styles for Startup Growth Lites's parallax and video bg region.
+ */
+.parallax-active .colored-region.black .highlighted-bottom-transparent-bg,
+.video-bg-active .colored-region.black .highlighted-bottom-transparent-bg {
+  background-color: rgba(16, 16, 16, 0.8);
+}
+.parallax-active .light-gray-region .highlighted-bottom-transparent-bg,
+.video-bg-active .light-gray-region .highlighted-bottom-transparent-bg {
+  background-color: rgba(233, 233, 233, 0.8);
+}
+.parallax-active .highlighted-bottom-transparent-bg,
+.video-bg-active .highlighted-bottom-transparent-bg {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}

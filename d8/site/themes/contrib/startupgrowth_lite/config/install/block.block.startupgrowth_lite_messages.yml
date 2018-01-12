@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: dsdFLfl6khME5AjPNkgcoTuOJOMt2aIArIzIFUP9O2c
+id: startupgrowth_lite_messages
+theme: startupgrowth_lite
+region: system_messages
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: egDb2gNZXiqVJpJW69em-7EFYJKvcTRE5DrK2g_TDRA
+id: startupgrowth_lite_help
+theme: startupgrowth_lite
+region: content
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

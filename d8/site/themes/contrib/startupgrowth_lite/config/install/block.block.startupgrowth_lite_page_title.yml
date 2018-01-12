@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: l4AqPOMspE1Qh4If7g_XWjS_YnXn2H0YfHnRBHOtDDk
+id: startupgrowth_lite_page_title
+theme: startupgrowth_lite
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

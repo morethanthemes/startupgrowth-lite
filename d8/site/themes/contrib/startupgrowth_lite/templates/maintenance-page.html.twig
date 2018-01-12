@@ -1,0 +1,194 @@
+{#
+/**
+ * @file
+ * Startup Growth Lite's theme implementation to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+ #}
+
+{{ attach_library('startupgrowth_lite/maintenance-page') }}
+
+{# #page-container #}
+<div id="page-container" class="page-container">
+
+  {# #header-container #}
+  <div id="header-container" class="header-container">
+
+    {# #header-top #}
+    <div id="header-top" class="clearfix header-top">
+      <div class="container">
+        <div id="header-top-inside" class="clearfix header-top-inside">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="header-top-area">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {# EOF: #header-top #}
+
+    {# #header #}
+    <header id="header" role="banner" class="clearfix header full-width two-columns">
+      <div class="container">
+        {# #header-inside #}
+        <div id="header-inside" class="clearfix header-inside">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="header-area">
+                {# #header-inside-second #}
+                <div id="header-inside-second" class="clearfix header-inside-second">
+                  <div class="logo-and-site-name-wrapper clearfix">
+                    {% if logo %}
+                      <div class="logo">
+                        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-branding__logo">
+                          <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+                        </a>
+                      </div>
+                    {% endif %}
+                    {% if site_name %}
+                      <div class="site-name site-branding__name">
+                        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+                      </div>
+                    {% endif %}
+                    {% if site_slogan %}
+                      <div class="site-slogan site-branding__slogan">{{ site_slogan }}</div>
+                    {% endif %}
+                  </div>
+                </div>
+                {# EOF:#header-inside-second #}
+              </div>
+            </div>
+          </div>
+        </div>
+        {# EOF: #header-inside #}
+      </div>
+    </header>
+    {# EOF: #header #}
+
+  </div>
+  {# EOF: #header-container #}
+
+  {# #page #}
+  <div id="page" class="clearfix page">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          {{ page.system_messages }}
+        </div>
+      </div>
+    </div>
+
+    {# #main-content #}
+    <div id="main-content" class="clearfix main-content white-region">
+      <div class="container">
+        <div class="row">
+          <section class="col-md-12">
+            {# #main #}
+            <div id="main" class="clearfix main main-area">
+              {% if title %}
+                <h1 class="title page-title">{{ title }}</h1>
+              {% endif %}
+              {{ page.content }}
+            </div>
+            {# EOF:#main #}
+          </section>
+          <aside class="col-md-12">
+            {# #sidebar #}
+            <section id="sidebar-second" class="sidebar-second clearfix">
+            </section>
+            {# EOF:#sidebar #}
+          </aside>
+        </div>
+      </div>
+    </div>
+    {# EOF:#main-content #}
+
+  </div>
+  {# EOF:#page #}
+
+  {# #footer-top #}
+  <div id="footer-top" class="clearfix footer-top light-gray-region">
+    <div class="container">
+      {# #footer-top-inside #}
+      <div id="footer-top-inside" class="clearfix footer-top-inside">
+        <div class="row">
+          <div class="col-md-6">
+            {# #footer-top-first #}
+            <div id="footer-top-first" class="clearfix footer-top-first">
+              <div class="footer-top-area">
+              </div>
+            </div>
+            {# EOF:#footer-top-first #}
+          </div>
+          <div class="col-md-6">
+            {# #footer-top-second #}
+            <div id="footer-top-second" class="clearfix footer-top-second">
+              <div class="footer-top-area">
+              </div>
+            </div>
+            {# EOF:#footer-top-second #}
+          </div>
+        </div>
+      </div>
+      {# EOF: #footer-top-inside #}
+    </div>
+  </div>
+  {# EOF: #footer-top #}
+
+  {# #footer #}
+  <footer id="footer" class="clearfix footer colored-region black">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="footer-area">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-area">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-area">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="footer-area">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {# EOF #footer #}
+
+  <div id="subfooter" class="clearfix subfooter colored-region black">
+    <div class="container">
+      {# #subfooter-inside #}
+      <div id="subfooter-inside" class="clearfix subfooter-inside">
+        <div class="row">
+          {# #subfooter-first #}
+          <div class="col-md-6">
+            <div class="subfooter-area first">
+            </div>
+          </div>
+          {# EOF: #subfooter-first #}
+          {# #subfooter-second #}
+          <div class="col-md-6">
+            <div class="subfooter-area second">
+            </div>
+          </div>
+          {# EOF: #subfooter-second #}
+        </div>
+      </div>
+      {# EOF: #subfooter-inside #}
+    </div>
+  </div>
+  {# EOF:#subfooter #}
+
+</div>
+{# EOF: #page-container #}

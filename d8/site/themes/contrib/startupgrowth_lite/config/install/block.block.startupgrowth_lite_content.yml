@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: O4NcEzZqtSLr4OvTj8YQI6fkqLssLreZnDLEy3vQvuI
+id: startupgrowth_lite_content
+theme: startupgrowth_lite
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

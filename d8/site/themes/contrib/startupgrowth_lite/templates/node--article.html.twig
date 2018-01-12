@@ -1,0 +1,72 @@
+{#
+/**
+ * @file
+ * Startup Growth Lites's theme implementation to display a Article node.
+ */
+#}
+
+{% extends "node.html.twig" %}
+{% block meta_area %}
+  {% if display_submitted %}
+    <div class="node__meta">
+      {{ author_picture }}
+      <span{{ author_attributes.addClass('submitted-info') }}>
+        {% trans %}By {{ author_name }}{% endtrans %}
+      </span>
+      {{ metadata }}
+    </div>
+  {% endif %}
+{% endblock %}
+{% block node_side %}
+  {% if display_submitted or node.comment or (view_mode == "full" and mt_setting.reading_time) or (view_mode == "full" and mt_setting.post_progress) %}
+    <div class="node--submitted-info
+      {% if node.field_mt_subtitle.value or node.field_mt_subheader_body.value %} with-extra-top-space {% endif %}
+    ">
+      {% if display_submitted %}
+        <div class="submitted-date">
+          <i class="fa fa-calendar hidden-lg hidden-md hidden-sm"></i>
+          <div class="month">{{ node.createdtime|format_date('custom', 'M') }}</div>
+          <div class="day">{{ node.createdtime|format_date('custom', 'd') }}</div>
+          <div class="year">{{ node.createdtime|format_date('custom', 'Y') }}</div>
+        </div>
+      {% endif %}
+      {% if node.comment %}
+        <div class="comments-count">
+          <i class="fa fa-comment"></i>
+          <div class="comment-counter">{{ comment_count }}</div>
+        </div>
+      {% endif %}
+      {% if view_mode == "full" and (mt_setting.reading_time or mt_setting.post_progress) %}
+        {{ attach_library('startupgrowth_lite/node-side-affix') }}
+        <div id="affix">
+          {% if mt_setting.reading_time %}
+            <div class="reading-time">
+              <div>{% trans %}Time to read{% endtrans %}</div>
+              {% if minutes < 1 %}
+                <span>{% trans %}less than <br class="hidden-xs"> 1 minute{% endtrans %}</span>
+              {% elseif minutes < 2 %}
+                <span>{{ minutes }} {% trans %}minute{% endtrans %}</span>
+              {% else %}
+                <span>{{ minutes }} {% trans %}minutes{% endtrans %}</span>
+              {% endif %}
+            </div>
+          {% endif %}
+          {% if mt_setting.post_progress %}
+            {{ attach_library('startupgrowth_lite/post-progress') }}
+            <div class="post-progress">
+              {% trans %}Read so far{% endtrans %}
+              <span class="post-progress-value"></span>
+              <div class="post-progressbar"></div>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}
+{% block content %}
+  <div class="node--main-content">
+    {{ content|without('comment') }}
+  </div>
+  {{ content.comment }}
+{% endblock %}

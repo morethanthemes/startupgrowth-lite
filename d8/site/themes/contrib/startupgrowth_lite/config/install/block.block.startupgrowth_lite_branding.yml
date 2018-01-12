@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: 8zIXJUlJA9BrJkJvK-w89G2vgrWklMEFwqtvfF8sYdg
+id: startupgrowth_lite_branding
+theme: startupgrowth_lite
+region: header_first
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

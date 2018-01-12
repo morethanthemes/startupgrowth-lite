@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Visual styles for Levelplus's node side affix.
+ */
+
+@media (min-width: 768px) {
+  #affix.affix {
+    position: fixed;
+    width: 55px;
+  }
+  #affix.affix .share-links {
+    margin-top: 0;
+  }
+  #affix.affix-bottom {
+    position: absolute;
+    width: 55px;
+  }
+}
+@media (max-width: 767px) {
+  #affix.affix,
+  #affix.affix-bottom {
+    position: static!important;
+  }
+}

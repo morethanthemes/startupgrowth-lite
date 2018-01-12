@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: hHhMCGX7ZCZUefE1M0PGN3SrxlNos6NsksBhL4vtp_4
+id: startupgrowth_lite_main_menu
+theme: startupgrowth_lite
+region: navigation
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }
