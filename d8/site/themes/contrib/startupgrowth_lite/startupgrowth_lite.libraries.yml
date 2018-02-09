@@ -57,6 +57,7 @@ global-styling:
       css/components/pager.css: {}
       css/components/menu.css: {}
       css/components/views.css: {}
+      css/components/view-promoted-items.css: {}
       css/components/flexslider.css: {}
 
 field-mt-video:
