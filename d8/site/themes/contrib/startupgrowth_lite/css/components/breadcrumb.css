@@ -18,12 +18,6 @@
 .banner-area .block-system-breadcrumb-block {
   border-bottom: 1px solid #cfd0d2;
 }
-.banner-area .block + .block-system-breadcrumb-block {
-  margin-top: -50px;
-  background: rgba(255,255,255,0.85);
-  border: none;
-  position: relative;
-}
 .breadcrumb ol {
   padding-left: 75px;
 }

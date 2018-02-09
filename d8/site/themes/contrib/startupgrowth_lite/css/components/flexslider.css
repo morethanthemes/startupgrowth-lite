@@ -3,6 +3,11 @@
  * Visual styles for Startup Growth Lites's flexslider.
  */
 
+/*  */
+.container-fluid .region-banner .view-content .flexslider {
+  max-width: 1920px;
+  margin: 0 auto;
+}
 /* Flexslider module */
 .flexslider {
   background: #fff;
@@ -55,4 +60,7 @@
 .flex-direction-nav a:before {
   font-size: 34px;
 }
-
+.flex-control-nav {
+  bottom: 0;
+  z-index: 2;
+}

@@ -19,7 +19,8 @@
 #block-googlemapbanner {
   padding: 0;
 }
-.path-frontpage .block-system-main-block:last-child {
+.path-frontpage .block-system-main-block:last-child,
+.region-banner .block:last-child {
   padding-bottom: 0;
 }
 .header-area .block:first-child:last-child {

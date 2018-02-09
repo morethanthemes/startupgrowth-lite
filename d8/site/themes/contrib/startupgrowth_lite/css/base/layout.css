@@ -326,3 +326,8 @@ body:not(.path-frontpage) .content-top-highlighted {
     width: 1170px;
   }
 }
+
+/* Banner full width region */
+.container-fluid .banner-inside {
+  margin: 0 -15px;
+}
