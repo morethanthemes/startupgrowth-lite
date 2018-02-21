@@ -7,7 +7,8 @@ You are welcome however to grab this code and have the demonstration site runnin
 
 Installation instructions
 --------------
-+ Checkout this repository and place the “site” folder under your apache path.
++ Checkout this repository and navigate within the d7 or d8 folder depending on what version you wish to install.
++ Place the “site” folder under your apache path.
 + Create an empty MySQL database and import there the “db_instances/db_instance.sql” file. 
 + Start the Drupal installation wizard by pointing your browser to the recently created folder.
  + Continue the installation by selection "Standard" installation profile.
