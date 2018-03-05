@@ -6,8 +6,8 @@ package: Testing
 # core: 8.x
 php: 6502
 
-# Information added by Drupal.org packaging script on 2018-01-03
-version: '8.4.4'
+# Information added by Drupal.org packaging script on 2018-02-21
+version: '8.4.5'
 core: '8.x'
 project: 'drupal'
-datestamp: 1515021228
+datestamp: 1519234970
