@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: 1oz09dqMyw3Ua2uKsDd26gcAY5DiscFdfnQKWvgjwcY
+id: startupgrowth_lite_tools
+theme: startupgrowth_lite
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

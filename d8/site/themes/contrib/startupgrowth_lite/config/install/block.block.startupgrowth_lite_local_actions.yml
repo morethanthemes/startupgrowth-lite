@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: pLoVxJxCyMFpPrg7ctQTE6PL274EJb7JQ5HMsJI9rxE
+id: startupgrowth_lite_local_actions
+theme: startupgrowth_lite
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

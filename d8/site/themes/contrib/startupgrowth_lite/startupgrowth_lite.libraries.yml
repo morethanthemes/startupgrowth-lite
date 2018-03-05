@@ -1,0 +1,333 @@
+bootstrap:
+  version: 3.3.7
+  css:
+    base: #The CSS category. base is loaded before theme category
+      bootstrap/css/bootstrap.min.css: { weight: 0 } #weight sets the order within the category above
+  js:
+    bootstrap/js/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+
+bootstrap-cdn:
+  version: 3.3.7
+  remote: //maxcdn.bootstrapcdn.com/bootstrap/3.3.7
+  css:
+    base:
+      //maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css: { weight: 0 }
+  js:
+    //maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js: {}
+  license:
+    name: The MIT License (MIT)
+    url: //github.com/twbs/bootstrap/blob/master/LICENSE
+    gpl-compatible: true
+  dependencies:
+    - core/jquery
+
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/base/elements.css: { weight: 1 }
+      css/base/layout.css: {}
+      css/base/typography.css: {}
+    component:
+      css/components/accordion.css: {}
+      css/components/block.css: {}
+      css/components/breadcrumb.css: {}
+      css/components/buttons.css: {}
+      css/components/call-to-action.css: {}
+      css/components/contact-info.css: {}
+      css/components/more-links.css: {}
+      css/components/comments.css: {}
+      css/components/forms.css: {}
+      css/components/field-taxonomy-term.css: {}
+      css/components/icons-list.css: {}
+      css/components/item-list.css: {}
+      css/components/image-overlay.css: {}
+      css/components/node.css: {}
+      css/components/node-testimonial.css: {}
+      css/components/node-links.css: {}
+      css/components/node-images.css: {}
+      css/components/search.css: {}
+      css/components/site-branding.css: {}
+      css/components/tables.css: {}
+      css/components/tabs.css: {}
+      css/components/team-members.css: {}
+      css/components/pills.css: {}
+      css/components/pager.css: {}
+      css/components/menu.css: {}
+      css/components/views.css: {}
+      css/components/view-promoted-items.css: {}
+      css/components/flexslider.css: {}
+
+field-mt-video:
+  version: VERSION
+  css:
+    component:
+      css/components/field-mt-video.css: {}
+
+to-top:
+  version: VERSION
+  css:
+    component:
+      css/components/to-top.css: {}
+  js:
+    js/custom/to-top.js: { scope: 'footer' }
+  dependencies:
+    - core/jquery
+
+fixed-header:
+  version: VERSION
+  css:
+    component:
+      css/components/fixed-header.css: {}
+  js:
+    js/custom/fixed-header.js: { scope: 'footer' }
+  dependencies:
+    - core/jquery
+
+transparent-header:
+  version: VERSION
+  css:
+    component:
+      css/components/transparent-header.css: {}
+  js:
+    js/custom/transparent-header.js: { scope: 'footer' }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+animate:
+  version: 3.4.0
+  css:
+    component:
+      js/animate/animate.css: { weight: 0 }
+
+animate-global:
+  version: VERSION
+  css:
+    theme:
+      css/theme/animations.css: { weight: 1 }
+  dependencies:
+    - startupgrowth_lite/animate
+
+waypoints:
+  version: 4.0.0
+  js:
+    js/waypoints/jquery.waypoints.min.js: {}
+  dependencies:
+    - core/jquery
+
+waypoints-init:
+  version: VERSION
+  js:
+    js/init/waypoints-init.js: {}
+  dependencies:
+    - startupgrowth_lite/waypoints
+
+magnific-popup:
+  version: 1.1.0
+  css:
+    component:
+      js/magnific-popup/magnific-popup.css: { weight: 0 }
+  js:
+    js/magnific-popup/jquery.magnific-popup.min.js: {}
+  dependencies:
+    - core/jquery
+
+magnific-popup-field-image-init:
+  version: VERSION
+  js:
+    js/init/magnific-popup-field-image-init.js: { scope: 'footer' }
+  dependencies:
+    - startupgrowth_lite/magnific-popup
+    - core/drupal
+    - core/jquery.once
+
+magnific-popup-field-image-slider-init:
+  version: VERSION
+  js:
+    js/init/magnific-popup-field-image-slider-init.js: { scope: 'footer' }
+  dependencies:
+    - startupgrowth_lite/magnific-popup
+    - core/drupal
+    - core/jquery.once
+
+magnific-popup-field-video-init:
+  version: VERSION
+  js:
+    js/init/magnific-popup-field-video-init.js: { scope: 'footer' }
+  dependencies:
+    - startupgrowth_lite/magnific-popup
+    - core/drupal
+    - core/jquery.once
+
+flexslider:
+  version: 2.5.0
+  css:
+    base:
+      js/flexslider/flexslider.css: { weight: 0 }
+  js:
+    js/flexslider/jquery.flexslider-min.js: {}
+  dependencies:
+    - core/jquery
+
+flexslider-global:
+  version: VERSION
+  css:
+    component:
+      css/components/flexslider-global.css: {}
+  dependencies:
+    - startupgrowth_lite/flexslider
+
+flexslider-in-page-init:
+  version: VERSION
+  css:
+    component:
+      css/components/flexslider-in-page.css: {}
+  js:
+    js/init/flexslider-in-page-init.js: { scope: 'footer' }
+  dependencies:
+    - startupgrowth_lite/flexslider-global
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery.once
+
+smooth-scroll:
+  version: VERSION
+  js:
+    js/custom/smooth-scroll.js: {}
+  dependencies:
+    - core/jquery
+
+parallax-and-video-bg:
+  version: VERSION
+  css:
+    component:
+      css/components/parallax-and-video-bg.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+parallax-init:
+  version: VERSION
+  css:
+    component:
+      css/components/parallax.css: {}
+  dependencies:
+    - startupgrowth_lite/parallax-and-video-bg
+    - core/modernizr
+    - core/jquery
+
+post-progress:
+  version: VERSION
+  js:
+    js/custom/post-progress.js: {}
+  dependencies:
+    - core/jquery
+
+node-side-affix:
+  version: VERSION
+  css:
+    component:
+      css/components/node-side-affix.css: {}
+  js:
+    js/custom/node-side-affix.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+fontawesome:
+  version: 4.6.3
+  remote: //maxcdn.bootstrapcdn.com/font-awesome/4.6.3/
+  css:
+    theme:
+      //maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css: {}
+  license:
+    name: MIT
+    url: //opensource.org/licenses/mit-license.html
+    gpl-compatible: true
+
+messages:
+  version: VERSION
+  css:
+    component:
+      css/components/messages.css: { preprocess: false }
+
+theme-settings:
+  version: VERSION
+  css:
+    theme:
+      css/components/theme-settings.css: {}
+
+maintenance-page:
+  version: VERSION
+  css:
+    component:
+      css/components/maintenance-page.css: {}
+
+local-stylesheets:
+  version: VERSION
+  css:
+    base:
+      css/base/local-base.css: { weight: 100 }
+    component:
+      css/components/local-components.css: { weight: 100 }
+    theme:
+      css/theme/local-theme.css: { weight: 150 }
+
+#####################
+#   Color Schemes   #
+#####################
+color-gray-orange:
+  version: VERSION
+  css:
+    theme:
+      css/theme/color-gray-orange.css: { weight: 100, preprocess: FALSE }
+
+####################
+# Fonts collection #
+####################
+fonts-id-05:
+  version: VERSION
+  remote: //fonts.googleapis.com/css
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=Roboto:400,400italic,700,300,700italic&subset=latin-ext,latin,greek: { type: external }
+  license:
+    name: Apache License, version 2.0
+    url: //www.apache.org/licenses/LICENSE-2.0.html
+    gpl-compatible: true
+
+fonts-id-10:
+  version: VERSION
+  remote: //fonts.googleapis.com/css
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin-ext,latin,greek: { type: external }
+  license:
+    name: Apache License, version 2.0
+    url: //www.apache.org/licenses/LICENSE-2.0.html
+    gpl-compatible: true
+
+fonts-sourcecodepro:
+  version: VERSION
+  remote: //fonts.googleapis.com/css
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=Source+Code+Pro&subset=latin,latin-ext: { type: external }
+  license:
+    name: SIL Open Font License, 1.1
+    url: //scripts.sil.org/OFL
+    gpl-compatible: true
+
+fonts-pt-serif:
+  version: VERSION
+  remote: //fonts.googleapis.com/css
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic&subset=latin,latin-ext: { type: external }
+  license:
+    name: SIL Open Font License, 1.1
+    url: //scripts.sil.org/OFL
+    gpl-compatible: true

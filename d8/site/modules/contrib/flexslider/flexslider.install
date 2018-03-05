@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Installation actions for FlexSlider.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Deletes all content and configuration installed by this module.
+ */
+function flexslider_uninstall() {
+  // Delete all of the configuration installed by this module.
+  $dir = drupal_get_path('module', 'flexslider') . '/config/install';
+  $files = file_scan_directory($dir, '/.*/');
+  foreach ($files as $file) {
+    \Drupal::configFactory()->getEditable($file->name)->delete();
+  }
+  \Drupal::logger('flexslider')->info(t('Deleted flexslider configuration'), []);
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function flexslider_requirements($phase) {
+  $requirements = [];
+
+  // Check to see if the flexslider library is available.
+  if ($phase == 'runtime') {
+    $library = libraries_detect('flexslider');
+    if ($library && !empty($library['installed'])) {
+      if ($library['version']) {
+        $description = t('Version %i installed', ['%i' => $library['version']]);
+      }
+      else {
+        $description = t('Unable to detect version.');
+      }
+      $requirements['flexslider'] = [
+        'title' => t('FlexSlider'),
+        'description' => $description,
+        'severity' => REQUIREMENT_OK,
+      ];
+    }
+    else {
+      $requirements['flexslider'] = [
+        'title' => t('FlexSlider'),
+        'description' => t('FlexSlider library not found. Please consult the README.md for installation instructions.'),
+        'severity' => REQUIREMENT_ERROR,
+      ];
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Add styles to the default configuration for flexslider module.
+ */
+function flexslider_update_8001() {
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('flexslider.settings');
+  $config->set('flexslider_css', TRUE);
+  $config->set('flexslider_module_css', TRUE);
+  $config->save(TRUE);
+}

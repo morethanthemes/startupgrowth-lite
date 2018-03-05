@@ -1,0 +1,13 @@
+name: 'FlexSlider Fields'
+description: 'Adds a display mode in Fields for FlexSlider'
+# core: 8.x
+package: FlexSlider
+dependencies:
+  - flexslider
+type: module
+
+# Information added by Drupal.org packaging script on 2017-04-12
+version: '8.x-2.0-beta1'
+core: '8.x'
+project: 'flexslider'
+datestamp: 1492020624

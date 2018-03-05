@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Visual styles for Startup Growth Lites's video background.
+ */
+.video-bg-active .highlighted-bottom {
+  overflow: hidden;
+}
+.video-container {
+  z-index: 1!important;
+}

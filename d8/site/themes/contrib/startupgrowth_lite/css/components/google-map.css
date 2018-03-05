@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Visual styles for Startupgrowth Lite's google maps.
+ */
+.google-map-canvas {
+  height: 400px;
+}
+.google-map-canvas img {
+  max-width: inherit;
+}

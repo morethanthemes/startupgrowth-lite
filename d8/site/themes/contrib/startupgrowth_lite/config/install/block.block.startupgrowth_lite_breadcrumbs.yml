@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: 9TMbsShhNAmTufA5aOzT_TVTZEcDwubB1WxGu3cgcyk
+id: startupgrowth_lite_breadcrumbs
+theme: startupgrowth_lite
+region: banner
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

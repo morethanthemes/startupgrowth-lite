@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - startupgrowth_lite
+_core:
+  default_config_hash: IxzDor_SJzqlqR4gujkL1EI_DSVI_0PQu-dF_3xb-B0
+id: startupgrowth_lite_local_tasks
+theme: startupgrowth_lite
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

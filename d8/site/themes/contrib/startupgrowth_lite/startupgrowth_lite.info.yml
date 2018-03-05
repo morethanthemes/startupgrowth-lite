@@ -1,0 +1,40 @@
+name: Startup Growth Lite
+type: theme
+base theme: classy
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+core: 8.x
+libraries:
+  - startupgrowth_lite/fontawesome
+  - startupgrowth_lite/global-styling
+  - startupgrowth_lite/messages
+  - startupgrowth_lite/local-stylesheets
+regions:
+  header_top: 'Header Top'
+  header_first: 'Header First'
+  header: 'Header Second'
+  navigation: 'Navigation'
+  search_area: 'Navigation search area'
+  banner: 'Banner'
+  system_messages: 'System Messages'
+  content_top: 'Content Top'
+  content_top_highlighted: 'Content Top Highlighted'
+  content: 'Content'
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  content_bottom_first: 'Content Bottom First'
+  content_bottom_second: 'Content Bottom Second'
+  highlighted: 'Highlighted'
+  highlighted_bottom_first: 'Highlighted Bottom First'
+  highlighted_bottom_second: 'Highlighted Bottom Second'
+  featured_top: 'Featured Top'
+  featured: 'Featured'
+  featured_bottom: 'Featured Bottom'
+  footer_top_first: 'Footer Top First'
+  footer_top_second: 'Footer Top Second'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_fourth: 'Footer Fourth'
+  sub_footer_first: 'Subfooter First'
+  footer: 'Subfooter Second'
+  hidden_blocks_collection: 'Hidden blocks collection'

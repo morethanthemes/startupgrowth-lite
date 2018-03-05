@@ -1,0 +1,126 @@
+/**
+ * @file
+ * Visual styles for Levelplus's in page slider.
+ */
+.in-page-images-slider ul.slides li {
+  position: relative;
+}
+@media (max-width:767px) {
+  .in-page-images-slider .flex-viewport {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+/*Service Slider nav control*/
+.in-page-images-carousel {
+  margin: 20px 0 0 0;
+}
+.in-page-images-carousel ul.slides li {
+  margin-right: 20px;
+  cursor: pointer;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.in-page-images-carousel ul.slides li.flex-active-slide,
+.in-page-images-carousel ul.slides li.flex-active-slide:hover {
+  cursor: default;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.in-page-images-carousel ul.slides li:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.in-page-images-carousel li .overlay i {
+  display: none;
+}
+
+/*Carousel direction Nav */
+.in-page-images-carousel .flex-direction-nav a {
+  color: #fff;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  width: 25px;
+  height: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  top: 0;
+  margin: 0;
+  text-shadow: none;
+  text-align: center;
+}
+.in-page-images-carousel .flex-direction-nav a:before {
+  font-size: 28px;
+  line-height: 93px;
+  font-family: 'FontAwesome';
+  display: inline-block;
+  content: '\f104';
+  padding-right: 2px;
+  color: #ffffff;
+  text-shadow: none;
+}
+.in-page-images-carousel .flex-direction-nav a.flex-next:before {
+  content: '\f105';
+  padding-right: 0px;
+}
+.two-sidebars .in-page-images-carousel .flex-direction-nav a:before {
+  line-height: 66px;
+}
+.in-page-images-carousel .flex-direction-nav .flex-disabled,
+.in-page-images-carousel .flex-direction-nav .flex-disabled:hover {
+  opacity: 0.3 !important;
+  filter: alpha(opacity=30) !important;
+  background-color: rgba(0, 0, 0, 0.55) !important;
+}
+.in-page-images-carousel .flex-prev:hover,
+.in-page-images-carousel .flex-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  color: #fff;
+}
+.in-page-images-carousel .flex-prev,
+.in-page-images-carousel.flexslider:hover .flex-prev {
+  left: 0;
+}
+.in-page-images-carousel .flex-next,
+.in-page-images-carousel.flexslider:hover .flex-next {
+  right: 0;
+  text-align: center;
+}
+@media all and (min-width:1200px) {
+  .in-page-images-carousel .flex-direction-nav a:before {
+    line-height: 116px;
+  }
+  .two-sidebars .in-page-images-carousel .flex-direction-nav a:before {
+    line-height: 83px;
+  }
+}
+@media (max-width:991px) {
+  .in-page-images-carousel .flex-direction-nav a:before,
+  .two-sidebars .in-page-images-carousel .flex-direction-nav a:before {
+    line-height: 110px;
+  }
+}
+@media (max-width:767px) {
+  .in-page-images-carousel {
+    margin: 20px 0 70px 0;
+  }
+  .in-page-images-carousel .flex-direction-nav {
+    margin-bottom: 30px;
+  }
+  .in-page-images-carousel .flex-direction-nav a {
+    width: 50px;
+    height: 50px;
+    top: auto;
+    margin: 0;
+    bottom: -60px;
+  }
+  .in-page-images-carousel .flex-direction-nav a:before,
+  .two-sidebars .in-page-images-carousel .flex-direction-nav a:before {
+    line-height: 50px;
+  }
+}

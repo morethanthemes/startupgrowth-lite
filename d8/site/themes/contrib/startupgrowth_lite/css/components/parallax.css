@@ -1,0 +1,16 @@
+/**
+ * @file
+ * Visual styles for Startup Growth Lites's parallax region.
+ */
+.parallax-active .highlighted-bottom {
+  background-image: url("../../images/parallax-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  z-index: 2;
+}
