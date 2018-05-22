@@ -5,10 +5,11 @@ description: 'Provides test type for a media item.'
 package: Testing
 # version: VERSION
 dependencies:
+  - media
   - media_test_source
 
-# Information added by Drupal.org packaging script on 2018-02-21
-version: '8.4.5'
+# Information added by Drupal.org packaging script on 2018-04-25
+version: '8.5.3'
 core: '8.x'
 project: 'drupal'
-datestamp: 1519234970
+datestamp: 1524673226
