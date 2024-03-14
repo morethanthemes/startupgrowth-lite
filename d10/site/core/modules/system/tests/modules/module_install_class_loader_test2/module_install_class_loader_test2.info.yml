@@ -1,0 +1,12 @@
+name: 'Module install class loader test2'
+description: 'Support module for tests that the class loader behaves as expected during module install.'
+type: module
+package: Testing
+# version: VERSION
+dependencies:
+  - drupal:module_install_class_loader_test1
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

@@ -1,0 +1,11 @@
+name: CKEditor 5 Incompatible Filter Test
+type: module
+description: "Provides a filter incompatible with CKEditor 5"
+package: Testing
+dependencies:
+  - drupal:ckeditor5
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

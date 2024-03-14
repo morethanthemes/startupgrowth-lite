@@ -1,0 +1,11 @@
+name: action_form_ajax_test
+type: module
+description: 'module used for testing ajax in action config entity forms.'
+package: Core
+# version: VERSION
+hidden: true
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

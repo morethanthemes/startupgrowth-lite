@@ -1,0 +1,12 @@
+name: Tour module tests
+type: module
+description: Tests module for tour module.
+package: Testing
+# version: VERSION
+dependencies:
+  - drupal:tour
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

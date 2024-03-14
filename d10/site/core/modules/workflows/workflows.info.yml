@@ -1,0 +1,11 @@
+name: 'Workflows'
+type: module
+description: 'Provides an interface to create workflows with transitions between different states (for example publication or user status) provided by other modules.'
+# version: VERSION
+package: Core
+configure: entity.workflow.collection
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

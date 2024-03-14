@@ -1,0 +1,12 @@
+name: 'Node module access tests language'
+type: module
+description: 'Support module for language-aware node access testing.'
+package: Testing
+# version: VERSION
+dependencies:
+  - drupal:options
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

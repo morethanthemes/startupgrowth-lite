@@ -1,0 +1,10 @@
+name: Test Theme Updates
+type: theme
+description: A theme that has a post update.
+# version: VERSION
+base theme: false
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

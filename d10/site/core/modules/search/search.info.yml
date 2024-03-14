@@ -1,0 +1,11 @@
+name: Search
+type: module
+description: 'Allows users to create search pages based on plugins provided by other modules.'
+package: Core
+# version: VERSION
+configure: entity.search_page.collection
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

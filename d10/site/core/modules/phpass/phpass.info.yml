@@ -1,0 +1,10 @@
+name: Password Compatibility
+type: module
+description: 'Provides the password checking algorithm for user accounts created with Drupal prior to version 10.1.0.'
+package: Core
+# version: VERSION
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

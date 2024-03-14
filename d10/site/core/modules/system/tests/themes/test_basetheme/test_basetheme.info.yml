@@ -1,0 +1,29 @@
+name: 'Theme test base theme'
+type: theme
+description: 'Test theme which acts as a base theme for other test subthemes.'
+# version: VERSION
+base theme: false
+hidden: true
+
+libraries:
+  - test_basetheme/global-styling
+libraries-override:
+  core/drupal.dialog:
+    js:
+      misc/dialog/dialog.js: false
+  core/loadjs:
+    js:
+      assets/vendor/loadjs/loadjs.min.js: js/loadjs.min.js
+  theme_test/theme_stylesheets_override_and_remove_test:
+    css:
+      base:
+        css/base-remove.css: false
+
+libraries-extend:
+  starterkit_theme/base:
+    - test_basetheme/global-styling
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

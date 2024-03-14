@@ -1,0 +1,13 @@
+name: 'FlexSlider Views Style'
+description: 'Adds a Views style plugin for FlexSlider'
+core_version_requirement: ^9 || ^10
+package: FlexSlider
+dependencies:
+  - drupal:views
+  - flexslider:flexslider
+type: module
+
+# Information added by Drupal.org packaging script on 2023-09-07
+version: '3.0.0-alpha1'
+project: 'flexslider'
+datestamp: 1694114708

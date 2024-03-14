@@ -1,0 +1,10 @@
+name: 'Path test with node grants'
+type: module
+description: 'Tests URL alias with hook_node_grants implementation'
+package: Testing
+# version: VERSION
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468
