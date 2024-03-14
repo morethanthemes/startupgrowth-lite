@@ -20,23 +20,20 @@ use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter;
  */
 class FlexsliderFormatter extends ImageFormatter {
   use FlexsliderFormatterTrait;
+  use FlexsliderImageFormatterTrait;
 
   /**
    * {@inheritdoc}
    */
   public static function defaultSettings() {
-    return self::getDefaultSettings() + parent::defaultSettings();
+    return parent::defaultSettings() + self::getDefaultSettings() + self::getDefaultImageSettings();
   }
 
   /**
    * {@inheritdoc}
    */
   public function settingsSummary() {
-    $summary = $this->buildSettingsSummary($this);
-
-    // Add the image settings summary and return.
-    return array_merge($summary, parent::settingsSummary());
-
+    return array_merge(parent::settingsSummary(), $this->buildSettingsSummary());
   }
 
   /**
@@ -44,7 +41,7 @@ class FlexsliderFormatter extends ImageFormatter {
    */
   public function settingsForm(array $form, FormStateInterface $form_state) {
     // Add the optionset setting.
-    $element = $this->buildSettingsForm($this);
+    $element = $this->buildSettingsForm();
 
     // Add the image settings.
     $element = array_merge($element, parent::settingsForm($form, $form_state));
@@ -63,11 +60,9 @@ class FlexsliderFormatter extends ImageFormatter {
    * {@inheritdoc}
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
-
     $images = parent::viewElements($items, $langcode);
-
-    return $this->viewImages($images, $this->getSettings());
-
+    $elements[] = $this->viewImages($images, $this->getSettings());
+    return $elements;
   }
 
   /**
@@ -82,8 +77,7 @@ class FlexsliderFormatter extends ImageFormatter {
    * {@inheritdoc}
    */
   public function calculateDependencies() {
-    $dependencies = parent::calculateDependencies();
-    return $dependencies + $this->getOptionsetDependencies($this);
+    return parent::calculateDependencies() + $this->getOptionsetDependencies();
   }
 
   /**
@@ -91,8 +85,7 @@ class FlexsliderFormatter extends ImageFormatter {
    */
   public function onDependencyRemoval(array $dependencies) {
     $changed = parent::onDependencyRemoval($dependencies);
-
-    if ($this->optionsetDependenciesDeleted($this, $dependencies)) {
+    if ($this->optionsetDependenciesDeleted($dependencies)) {
       $changed = TRUE;
     }
     return $changed;

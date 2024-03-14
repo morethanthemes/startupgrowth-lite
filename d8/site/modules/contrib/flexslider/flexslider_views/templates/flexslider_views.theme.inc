@@ -36,7 +36,7 @@ function template_preprocess_flexslider_views_style(array &$variables) {
   foreach ($variables['rows'] as $row) {
     // Render the row into a slide.
     // @todo should use render arrays instead of actual output
-    $item['slide'] = render($row);
+    $item['slide'] = \Drupal::service('renderer')->render($row);
     $item['caption'] = (isset($row['#caption']) && !empty($row['#caption'])) ? $row['#caption'] : NULL;
     $items[] = $item;
   }

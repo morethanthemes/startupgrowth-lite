@@ -6,16 +6,18 @@ FlexSlider. The module doesn't require Field UI to be enabled by default
 (so you can leave it off once everything is configured) but it is recommended
 to use to setup your display settings.
 
+
 Usage
 =====
 
-Manage the fields on any entity (ex: node of type Article)
+Manage the field display on any entity (ex: node of type Article)
 
-Ex: admin/structure/types/manage/article
+Ex: admin/structure/types/manage/article/display
 
-Select any field of type "image" or "media" and set the display options to
-"FlexSlider". Then select your option set in the display formatter settings.
-That's it!
+Select any field of type "image" and set the format to "FlexSlider". For entity
+reference fields (ex: media, paragraphs, etc) you can set the format to
+"FlexSlider (Entity)". Then select your option set in the display formatter
+settings. That's it!
 
 
 Responsive Images

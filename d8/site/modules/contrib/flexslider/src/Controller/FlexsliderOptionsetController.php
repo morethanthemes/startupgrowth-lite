@@ -22,7 +22,7 @@ class FlexsliderOptionsetController extends ControllerBase {
    */
   public function enable(Flexslider $flexslider) {
     $flexslider->enable()->save();
-    return new RedirectResponse($flexslider->url('collection', ['absolute' => TRUE]));
+    return new RedirectResponse($flexslider->toUrl('collection', ['absolute' => TRUE])->toString());
   }
 
   /**
@@ -36,7 +36,7 @@ class FlexsliderOptionsetController extends ControllerBase {
    */
   public function disable(Flexslider $flexslider) {
     $flexslider->disable()->save();
-    return new RedirectResponse($flexslider->url('collection', ['absolute' => TRUE]));
+    return new RedirectResponse($flexslider->toUrl('collection', ['absolute' => TRUE])->toString());
   }
 
 }

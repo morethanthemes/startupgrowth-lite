@@ -6,6 +6,8 @@
  */
 
 use Drupal\node\Entity\Node;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_install().
@@ -31,9 +33,15 @@ function flexslider_example_uninstall() {
     \Drupal::logger('flexslider')->info(t('Deleted @count flexslider_example nodes', ['@count' => count($nodes)]), []);
   }
 
+  // Remove Flexslider node type.
+  $content_type = \Drupal::entityTypeManager()->getStorage('node_type')->load('flexslider_example');
+  if (!empty($content_type)) {
+    $content_type->delete();
+  }
+
   // Now delete all of the configuration installed by this module.
-  $dir = drupal_get_path('module', 'flexslider_example') . '/config/install';
-  $files = file_scan_directory($dir, '/.*/');
+  $dir = \Drupal::service('extension.list.module')->getPath('flexslider_example') . '/config/install';
+  $files = \Drupal::service('file_system')->scanDirectory($dir, '/.*/');
   foreach ($files as $file) {
     \Drupal::configFactory()->getEditable($file->name)->delete();
   }
@@ -46,23 +54,23 @@ function flexslider_example_uninstall() {
  */
 function flexslider_example_generate_content() {
 
-  $dir = drupal_get_path('module', 'flexslider') . '/assets/images';
-  $images = file_scan_directory($dir, '/flexslider-sample/');
+  $dir = \Drupal::service('extension.list.module')->getPath('flexslider') . '/assets/images';
+  $images = \Drupal::service('file_system')->scanDirectory($dir, '/flexslider-sample/');
 
   foreach ($images as $image) {
 
     $filename = $image->filename;
 
     $file_temp = file_get_contents($image->uri);
-    $file_temp = file_save_data($file_temp, 'public://' . $filename, FILE_EXISTS_RENAME);
+    $file_temp = \Drupal::service('file.repository')->writeData($file_temp, 'public://' . $filename, FileSystemInterface::EXISTS_RENAME);
 
     // Create node object with attached file.
     $node = Node::create([
       'type'  => 'flexslider_example',
       'title'  => ucfirst(str_replace('-', ' ', $image->name)),
-      'promote' => NODE_NOT_PROMOTED,
-      'created' => REQUEST_TIME,
-      'changed' => REQUEST_TIME,
+      'promote' => NodeInterface::NOT_PROMOTED,
+      'created' => \Drupal::time()->getRequestTime(),
+      'changed' => \Drupal::time()->getRequestTime(),
       'uid' => 1,
       'field_flexslider_example_image' => [
         'target_id' => $file_temp->id(),

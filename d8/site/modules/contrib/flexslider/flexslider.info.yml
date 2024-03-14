@@ -1,15 +1,14 @@
 name: FlexSlider
-description: 'Integrate the FlexSlider 2 library with Drupal'
-# core: 8.x
+description: Integrate the FlexSlider 2 library with Drupal
 package: FlexSlider
 dependencies:
-  - image
-  - libraries
+  - drupal:image
 type: module
 configure: entity.flexslider.collection
+core_version_requirement: ^9 || ^10
+# version: 3.0.0-alpha1
 
-# Information added by Drupal.org packaging script on 2017-04-12
-version: '8.x-2.0-beta1'
-core: '8.x'
+# Information added by Drupal.org packaging script on 2023-09-07
+version: '3.0.0-alpha1'
 project: 'flexslider'
-datestamp: 1492020624
+datestamp: 1694114708

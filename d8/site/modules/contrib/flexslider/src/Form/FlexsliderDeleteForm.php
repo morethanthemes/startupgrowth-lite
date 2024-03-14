@@ -38,7 +38,7 @@ class FlexsliderDeleteForm extends EntityConfirmFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->entity->delete();
 
-    drupal_set_message(
+    $this->messenger()->addStatus(
       $this->t('Deleted the %label FlexSlider optionset.',
         [
           '%label' => $this->entity->label(),

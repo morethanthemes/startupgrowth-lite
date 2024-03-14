@@ -163,7 +163,7 @@ function template_preprocess_flexslider_list_item(&$variables) {
     // Let's also get the alt attribute to apply to thumbnails.
     // This only works in library version 2.6+.
     $alt = [];
-    preg_match("/<img.+?alt=[\"'](.+?)[\"'].+?>/", $item, $alt);
+    preg_match("/<img.+?alt=[\"'](.*?)[\"'].+?>/", $item, $alt);
 
     if (!empty($alt)) {
       $attributes['data-thumb-alt'] = $alt[1];

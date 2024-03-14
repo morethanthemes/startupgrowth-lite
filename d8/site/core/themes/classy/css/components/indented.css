@@ -1,4 +1,3 @@
-
 /**
  * @file
  * Basic styling for comment module.
@@ -11,6 +10,6 @@
   margin-left: 25px; /* LTR */
 }
 [dir="rtl"] .indented {
-  margin-left: 0;
   margin-right: 25px;
+  margin-left: 0;
 }

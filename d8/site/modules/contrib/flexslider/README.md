@@ -33,8 +33,11 @@ Installation
 Dependencies
 ------------
 
-- [Libraries API 2.x](http://drupal.org/project/libraries)
 - [FlexSlider Library](https://github.com/woothemes/FlexSlider)
+
+The [Libraries API](http://drupal.org/project/libraries) module is no longer
+required if you are using Drupal 8.9+, OR you have put the flexslider
+library in the standard location. i.e. '[DRUPAL ROOT]/libraries')
 
 Tasks
 -----
@@ -45,9 +48,10 @@ https://github.com/woothemes/FlexSlider
 2. Unzip the file and rename the folder to "flexslider" (pay attention to the
 case of the letters)
 3. Put the folder in one of the following places relative to drupal root.
-    - libraries
+    - libraries (this is the standard location)
     - profiles/PROFILE-NAME/libraries
-    - sites/all/libraries
+    - sites/all/libraries (ONLY if Libraries API is installed)
+    - sites/default/libraries
     - sites/SITE-NAME/libraries
 4. The following files are required (last file is required for javascript
 debugging)
@@ -64,48 +68,39 @@ Composer
 ----------
 Composer may be used to download the library as follows...
 
-1. Add the following to composer.json _require_ section
-  `
-    "woothemes/flexslider": "~2.0"
-  `
-
-2. Add the following to composer.json _installer-paths_ section
+1. Add the following to composer.json _installer-paths_ section
 (if not already added)
   `
     "libraries/{$name}": ["type:drupal-library"]
   `
 
-3. Add the following to composer.json _repositories_ section
-(your version may differ)
+2. Add the FlexSlider Library package to your composer file. Use _ONE_ of the
+following methods.
+    * Use https://github.com/balbuf/drupal-libraries-installer
+    OR
+    * Add the following to composer.json _repositories_ section
+    (your version may differ)
 
 
-    {
-      "type": "package",
-      "package": {
-        "name": "woothemes/flexslider",
-        "version": "2.6.3",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/woothemes/FlexSlider.git",
-          "type": "git",
-          "reference": "2.6.3"
+        {
+          "type": "package",
+          "package": {
+            "name": "woocommerce/flexslider",
+            "version": "2.7.2",
+            "type": "drupal-library",
+            "source": {
+              "url": "https://github.com/woocommerce/FlexSlider.git",
+              "type": "git",
+              "reference": "2.7.2"
+            }
+          }
         }
-      }
-    }
 
-4. Open a command line terminal and navigate to the same directory as your
+3. Open a command line terminal and navigate to the same directory as your
 composer.json file and run
   `
-    composer update
+    composer require woocommerce/flexslider:~2.0
   `
-
-
-Drush Make
-----------
-
-You can also use Drush Make to download the library automatically. Simply
-copy/paste the 'flexslider.make.example' to 'flexslider.make' or copy the
-contents of the make file into your own make file.
 
 Usage
 ======

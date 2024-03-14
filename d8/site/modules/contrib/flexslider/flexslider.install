@@ -12,8 +12,8 @@
  */
 function flexslider_uninstall() {
   // Delete all of the configuration installed by this module.
-  $dir = drupal_get_path('module', 'flexslider') . '/config/install';
-  $files = file_scan_directory($dir, '/.*/');
+  $dir = \Drupal::service('extension.list.module')->getPath('flexslider') . '/config/install';
+  $files = \Drupal::service('file_system')->scanDirectory($dir, '/.*/');
   foreach ($files as $file) {
     \Drupal::configFactory()->getEditable($file->name)->delete();
   }
@@ -28,21 +28,17 @@ function flexslider_requirements($phase) {
 
   // Check to see if the flexslider library is available.
   if ($phase == 'runtime') {
-    $library = libraries_detect('flexslider');
-    if ($library && !empty($library['installed'])) {
-      if ($library['version']) {
-        $description = t('Version %i installed', ['%i' => $library['version']]);
-      }
-      else {
-        $description = t('Unable to detect version.');
-      }
-      $requirements['flexslider'] = [
-        'title' => t('FlexSlider'),
-        'description' => $description,
-        'severity' => REQUIREMENT_OK,
-      ];
+    $path = DRUPAL_ROOT . '/libraries/flexslider/jquery.flexslider-min.js';
+    $found = file_exists($path);
+
+    // Find the library in the profiles path if not found.
+    if (!$found) {
+      $path = \Drupal::service('extension.list.profile')->getPath(\Drupal::installProfile());
+      $path .= '/libraries/flexslider/jquery.flexslider-min.js';
+      $found = file_exists($path);
     }
-    else {
+
+    if (!$found) {
       $requirements['flexslider'] = [
         'title' => t('FlexSlider'),
         'description' => t('FlexSlider library not found. Please consult the README.md for installation instructions.'),

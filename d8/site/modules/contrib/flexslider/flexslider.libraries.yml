@@ -9,14 +9,14 @@ flexslider:
     url: https://github.com/woothemes/FlexSlider/blob/master/LICENSE.md
     gpl-compatible: true
   js:
-    jquery.flexslider-min.js: { minified: true }
+    /libraries/flexslider/jquery.flexslider-min.js: { minified: true }
   css:
     component:
-      flexslider.css: {}
+      /libraries/flexslider/flexslider.css: {}
 
 integration:
   js:
-    assets/js/flexslider.load.js: {}
+    dist/js/flexslider.load.min.js: { minified: true }
   css:
     theme:
       assets/css/flexslider_img.css: {}
@@ -24,5 +24,5 @@ integration:
     - core/jquery
     - core/drupal
     - core/drupalSettings
-    - core/jquery.once
+    - core/once
     - flexslider/flexslider
