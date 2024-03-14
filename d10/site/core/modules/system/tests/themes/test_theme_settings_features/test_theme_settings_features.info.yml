@@ -1,0 +1,13 @@
+name: Test features
+type: theme
+base theme: stable9
+description: 'Test theme to test theme settings with limited features.'
+features:
+  - node_user_picture
+  - comment_user_picture
+  - comment_user_verification
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

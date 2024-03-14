@@ -1,0 +1,12 @@
+name: 'Views test field'
+type: module
+description: 'Add custom global field for testing purposes.'
+package: Testing
+# version: VERSION
+dependencies:
+  - drupal:views_ui
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

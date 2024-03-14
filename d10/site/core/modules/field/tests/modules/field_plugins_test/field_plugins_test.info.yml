@@ -1,0 +1,12 @@
+name: 'Field Plugins Test'
+type: module
+description: 'Support module for the field and entity display tests.'
+package: Testing
+# version: VERSION
+dependencies:
+  - drupal:text
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

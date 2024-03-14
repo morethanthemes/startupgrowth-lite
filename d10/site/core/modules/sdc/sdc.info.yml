@@ -1,0 +1,13 @@
+name: Single Directory Components
+type: module
+description: 'Allows discovery and rendering of self-contained UI components.'
+# version: VERSION
+package: Core (Experimental)
+lifecycle: experimental
+dependencies:
+  - drupal:serialization
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

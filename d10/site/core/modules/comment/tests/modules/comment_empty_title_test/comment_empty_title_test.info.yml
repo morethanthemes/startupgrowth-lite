@@ -1,0 +1,12 @@
+name: 'Comment empty titles test'
+type: module
+description: 'Support module for testing empty title accessibility with Comment module.'
+package: Testing
+# version: VERSION
+dependencies:
+  - drupal:comment
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

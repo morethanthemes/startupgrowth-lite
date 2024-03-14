@@ -1,0 +1,11 @@
+name: Block
+type: module
+description: 'Allows users to configure blocks (containing content, forms, etc.) and to place them in the regions of a theme.'
+package: Core
+# version: VERSION
+configure: block.admin_display
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

@@ -1,0 +1,15 @@
+name: 'Module required test'
+type: module
+description: 'Support module for module system testing.'
+package: Testing
+# version: VERSION
+# Depends on the Node module to test making a module required using
+# hook_system_info_alter() and ensuring that its dependencies also become
+# required.
+dependencies:
+  - drupal:node (>=8.x)
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468

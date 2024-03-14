@@ -1,0 +1,15 @@
+name: Testing
+type: profile
+description: 'Minimal profile for running tests. Includes absolutely required modules only.'
+# version: VERSION
+hidden: true
+install:
+  # Enable page_cache and dynamic_page_cache in testing, to ensure that as many
+  # tests as possible run with them enabled.
+  - drupal:page_cache
+  - dynamic_page_cache
+
+# Information added by Drupal.org packaging script on 2024-03-06
+version: '10.2.4'
+project: 'drupal'
+datestamp: 1709715468
